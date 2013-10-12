@@ -1,0 +1,20 @@
+<html>
+<body>
+	<h1>Welcome to the Django world</h1>
+	<br>
+	<h3> Info in base </h3>
+	<hr>
+	Path: {{v_path}} <br>
+	host: {{v_host}} <br>
+	Url: {{v_url}} <br>
+	Is Https: {{v_https}} <br>
+	<br>
+	<h3> Info in Meta </h3>
+	<hr>
+	<ul>
+		{% for item in meta_list %}
+    		<li>{{ item }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>

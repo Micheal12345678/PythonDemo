@@ -102,6 +102,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #显示本地化
     'django.middleware.locale.LocaleMiddleware',
+    #可以使用POST
+    #'django.middleware.csrf.CsrfResponseMiddleware',
 )
 
 ROOT_URLCONF = 'DjangoWeb.urls'

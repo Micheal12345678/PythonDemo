@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+	<h1>Search Book</h1>
+	<form action="/search/" method="get">
+        
+        <input type="text" name="query">
+        <input type="submit" value="Search">
+    </form>
+    <ul>
+		{% for item in books %}
+    		<li>{{ item.title }} {{ item.authors.name }} </li>
+		{% endfor %}
+	</ul>
+
+    <hr>
+    <h1>Contact US</h1>
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action="/search/" method="post">
+        {% csrf_token %}
+        <p>Subject: <input type="text" name="subject"></p>
+        <p>Your e-mail (optional): <input type="text" name="email"></p>
+        <p>Message: <textarea name="message" rows="10" cols="50"></textarea></p>
+        <input type="submit" value="Submit">
+    </form>
+
+    {{subject_v}}
+    <br>
+    {{email_v}}
+    <br>
+    {{message_v}}
+    <br>
+
+
+
+</body>
+</html>
