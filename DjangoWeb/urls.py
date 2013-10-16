@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 #Index就是路由的名称，源自于什么文件
 from DjangoWeb.View.Index import index,detail,hours_ahead,template,home
 
+
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()

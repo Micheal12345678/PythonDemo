@@ -7,8 +7,6 @@ from django.views.decorators.csrf import csrf_protect
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from DjangoWeb.Form.Contact import ContactForm
-
-
 import datetime
 
 # coding=utf-8
